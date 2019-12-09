@@ -1,0 +1,12 @@
+{% extends 'wrapper.html' %}
+{% block content %}
+{% if answers %}
+{% for answer in answers %}
+<p>{{ answer[0] }}</p>{% if answer[1] != 0 %}
+<p>Но с несоответсвием ({% for a in answer[1] %}{{ a }}{% endfor %})</p>
+{% endif %}
+{% endfor %}
+{% else %}
+<p>Простите, подходящего языка нет в нашей базе, но мы скоро мы его добавим</p>
+{% endif %}
+{% endblock %}
