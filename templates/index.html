@@ -1,16 +1,30 @@
 {% extends 'wrapper.html' %}
 {% block content %}
-<form action="/answer" method="POST">
-    <p><b>Каким критерия должен соответсвовать ваш язык?</b></p>
-    <p>
-        <input type="checkbox" name="is_simple" value="Простой" checked>Прост в освоении<Br>
-        <input type="checkbox" name="is_server" value="Серверный">Серверный язык<Br>
-        <input type="checkbox" name="is_objective" value="Поддерживает ООП">Поддерживает ООП<Br>
-        <input type="checkbox" name="is_gaming" value="Пригоден для игр">Подходит для разработки игр<Br>
-        <input type="checkbox" name="is_compiled" value="Компилируемый">Компилируемый <br>
-        <input type="checkbox" name="is_mobile" value="Подходит для мобильных">Подходит для разробоки под телефоны <br>
-        <input type="checkbox" name="is_multithread" value="Поддерживает многопоточность">Многопоточный
-    </p>
-    <p><input type="submit" value="Отправить"></p>
-</form>
+<div class="container-fluid">
+    <div class="row padding"></div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-3">
+            <form action="/answer" method="POST">
+
+                <div class="PrettyFont">
+                    <p><b>Каким критерия должен соответсвовать ваш язык?</b></p>
+                </div>
+                <p>
+                    <input type="checkbox" name="is_simple" value="Простой" checked>Прост в освоении<Br>
+                    <input type="checkbox" name="is_server" value="Серверный">Серверный язык<Br>
+                    <input type="checkbox" name="is_objective" value="Поддерживает ООП">Поддерживает ООП<Br>
+                    <input type="checkbox" name="is_gaming" value="Пригоден для игр">Подходит для разработки игр<Br>
+                    <input type="checkbox" name="is_compiled" value="Компилируемый">Компилируемый <br>
+                    <input type="checkbox" name="is_mobile" value="Подходит для мобильных">Подходит для разробоки под
+                    телефоны <br>
+                    <input type="checkbox" name="is_multithread" value="Поддерживает многопоточность">Многопоточный
+                </p>
+                <p><input type="submit" value="Отправить"></p>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
 {% endblock %}
