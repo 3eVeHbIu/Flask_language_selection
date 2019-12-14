@@ -6,10 +6,12 @@
         <div class="col"></div>
         <div class="col">{% if answers %}
             <div class="PrettyFont text-center">Вам подходят языки: </div>
-            {% for answer in answers %}
-            <p>{{ answer[0] }}{% if answer[1] %}, но с несоответсвием
-                ({% for a in answer[1] %}{{ a }}{% endfor %}){% endif %}</p>
-            {% endfor %}{% else %}
+            <br>
+            <ul>{% for answer in answers %}
+                <li class="list-group-item">{{ answer[0] }}{% if answer[1] %}, но с несоответсвием
+                    ({% for a in answer[1] %}{{ a }}{% endfor %}){% endif %}</li>
+                {% endfor %}
+            </ul>{% else %}
             <div class="PrettyFont">
                 <p>Простите, подходящего языка нет в нашей базе, но мы скоро его добавим</p>
             </div>{% endif %}
