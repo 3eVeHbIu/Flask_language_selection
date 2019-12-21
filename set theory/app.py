@@ -179,7 +179,7 @@ def show_answer():
         if len(language[1].difference(user)) < 2:
             answers.append((language[0], language[1].difference(user)))
 
-    return render_template('answer.html', answers=answers)
+    return render_template('answer.html', answers=answers, title='Результат')
 
 
 if __name__ == '__main__':

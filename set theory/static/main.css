@@ -1,0 +1,18 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.PrettyFont{
+    font-family: 'Caveat', cursive;
+    font-size: x-large;
+}
+
+.padding{
+    padding-bottom: 2em;
+}
+
+/*font-family: 'Amatic SC', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Caveat', cursive;*/
