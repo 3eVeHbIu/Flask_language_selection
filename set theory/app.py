@@ -20,34 +20,16 @@ def hello_world():
 
 @app.route('/answer', methods=['POST'])
 def show_answer():
-    try:
-        simple = request.form['is_simple']
-    except KeyError:
-        simple = 'Не простой'
-    try:
-        server = request.form['is_server']
-    except KeyError:
-        server = 'Не серверный'
-    try:
-        an_object = request.form['is_objective']
-    except KeyError:
-        an_object = 'Не поддерживает ООП'
-    try:
-        game = request.form['is_gaming']
-    except KeyError:
-        game = 'Не пригоден для игр'
-    try:
-        compiled = request.form['is_compiled']
-    except KeyError:
-        compiled = 'Не компилируемый'
-    try:
-        mobile = request.form['is_mobile']
-    except KeyError:
-        mobile = 'Не подходит для мобильных'
-    try:
-        multithread = request.form['is_multithread']
-    except KeyError:
-        multithread = 'Не поддерживает многопоточность'
+    form = request.form
+    form.to_dict(flat=True)
+    simple = form.get('is_simple', 'Не простой')
+    server = request.form.get('is_server', 'Не серверный')
+    an_object = request.form.get('is_objective', 'Не поддерживает ООП')
+    game = request.form.get('is_gaming', 'Не пригоден для игр')
+    compiled = request.form.get('is_compiled', 'Не компилируемый')
+    mobile = request.form.get('is_mobile', 'Не подходит для мобильных')
+    multithread = request.form.get(
+        'is_multithread', 'Не поддерживает многопоточность')
 
     user = {simple, server, an_object, game, compiled, mobile, multithread}
 
